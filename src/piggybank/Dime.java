@@ -1,32 +1,36 @@
 package piggybank;
 
-public class Quarter extends Coin {
+public class Dime extends Coin {
     
-    public Quarter(int inNumberOf, String name){
+    public Dime(int inNumberOf, String name){
         super(inNumberOf, name);
       
     }
    
 
     public  String getName(){
-        return "Quarter";
+        if(getInNumberOf() > 1){
+            return "Dimes";
+            }else{
+                return "Dime";
+            }
     }
     
-    public static double getValue(int a){
-        if(a == a){
-            return a * 0.25;
-        }else{
-            return 0.25;
-        }
-        
-    }
     
     public double getTotal(){
         return getValue(getInNumberOf());
      }
+    public static double getValue(int a){
+        if(a == a){
+            return a * 0.10;
+        }else{
+            return 0.10;
+        }
+        
+    }
 
     public double getInValue(){
-        return 0.25;
+        return 0.10;
     }
 
 

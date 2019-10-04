@@ -7,7 +7,7 @@ public abstract class Coin {
     private String name;
     private double inValue;
     private int inNumberOf;
-   
+   private double total;
 
     public Coin( int inNumberOf, String name){
 
@@ -15,8 +15,12 @@ public abstract class Coin {
         this.name = name;
         this.inValue = inValue;
         this.inNumberOf = inNumberOf;
+        this.total = total;
         
-        
+    }
+
+    public int getInNumberOf(){
+        return inNumberOf ;
     }
     
     public int getId(){
@@ -27,13 +31,14 @@ public abstract class Coin {
         return name;
     }
 
-    // public double getValue(){
-    //     return value;
-    // }
     public double getInValue(){
         return inValue;
     }
+ 
 
-
+    public double getTotal(){
+        return total;
+    }
+  
     
 }
